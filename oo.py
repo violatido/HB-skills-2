@@ -3,31 +3,36 @@
 1. What are the three main design advantages that object orientation
    can provide? Explain each concept.
 
-(replace this with your answer)
+- abstraction: hiding unecessary details
+- polymorphism: allowing data structures to be replicated with varying differences 
+- encapsulation: keeping all relevant data together
 
 
 2. What is a class?
 
-(replace this with your answer)
+A class is a template with which one can create several instances. 
+Each instance inherits attributes and methods from the class from which it was created, allowing similar 
+    information to be stored in separate but related structures.
 
 
 3. What is a method?
 
-(replace this with your answer)
+A method is a function that takes place within a class or instance, using attributes
 
 
 4. What is an instance in object orientation?
 
-(replace this with your answer)
-
+An instance is a replica of a class that inherits attributes and methods from that class. 
+Data specific to that class can be manually changed or added via instance attributes and methods
 
 5. How is a class attribute different than an instance attribute?
    Give an example of when you might use each.
 
-(replace this with your answer)
+A class attribute is stored data that will be passed down to each instance of that class
+An instance attribute is data that will pertain to only that instance, and no other instance of that class
 """
 
-
+#------------------------------------------------------------------------------------------------------------
 """2. Road Class"""
 
 

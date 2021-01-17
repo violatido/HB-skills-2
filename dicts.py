@@ -136,7 +136,35 @@ def translate_to_pirate_talk(phrase):
         'me swabbie be not a man!'
     """
 
-    return ""
+        # create a dicitonary of english to priate talk
+    pirate_dict = {
+        "sir": "matey",
+        "hotel": "fleabag inn",
+        "student": "swabbie",
+        "man": "matey",
+        "professor": "foul blaggart",
+        "restaurant": "galley",
+        "your": "yer",
+        "excuse": "arr",
+        "students": "swabbies",
+        "are": "be",
+        "restroom": "head",
+        "my": "me",
+        "is": "be",
+    }
+
+    # create an empty list
+    pirate_string = []
+    # split the string into a list, and iterate through it
+    for word in phrase.split(' '):
+        # if a word in the phrase matches a key, add the value of the key to the list
+        # if it doesn't match, add the word itself to the list
+        pirate_string.append(pirate_dict.get(word, word))
+    # return the list of words joined into a string
+    print(' '.join(pirate_string))
+    
+translate_to_pirate_talk("This student has an excuse for your professor")
+# output: This swabbie has an arr for yer foul blaggart
 
 #--------------------------------------------------------------------------------------------------------------
 

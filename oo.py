@@ -36,22 +36,21 @@ An instance attribute is data that will pertain to only that instance, and no ot
 """2. Road Class"""
 
 
-# Replace this with your code
+class Road:
+    num_lanes = 2
+    speed_limit = 25
 
+road_1 = Road()
+road_2 = Road()
 
+road_1.num_lanes = 4
+road_1.speed_limit = 60
+
+#------------------------------------------------------------------------------------------------------------
 """3. Update Password"""
 
 
-class User:
-    """A user object."""
-
-    def __init__(self, username, password):
-        """Create a user with the given username and password."""
-
-        self.username = username
-        self.password = password
-
-
+#------------------------------------------------------------------------------------------------------------
 """4. Build a Library"""
 
 
@@ -64,7 +63,7 @@ class Book(object):
         self.title = title
         self.author = author
 
-
+#------------------------------------------------------------------------------------------------------------
 """5. Rectangle"""
 
 

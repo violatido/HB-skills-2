@@ -29,8 +29,23 @@ def count_words(phrase):
         {'Porcupine': 1, 'do.': 1, 'porcupine': 1, 'see,': 1}
     """
 
-    return {}
+    # define a function that takes in a string
+    test_dict = {}
+    # split the string into a list and iterate through it
+    for word in phrase.split(' '):
+        # if the word not in dictionary, add the word with a value of 1
+        if word not in test_dict:
+            test_dict[word] = 1
+        #if the word is already in the dictionary, add 1 to the value
+        else:
+            test_dict[word] += 1
 
+    # return the dictionary ({word: numOccurs})
+    return test_dict
+
+print(count_words("Apple berry cherry apple banana cherry cherry"))
+
+#--------------------------------------------------------------------------------------------------------------
 
 def print_melon_at_price(price):
     """Given a price, print all melons available at that price, in alphabetical order.
@@ -57,8 +72,8 @@ def print_melon_at_price(price):
         >>> print_melon_at_price(5.50)
         None found
     """
-
-    return
+    
+#--------------------------------------------------------------------------------------------------------------
 
 
 def translate_to_pirate_talk(phrase):
@@ -102,6 +117,7 @@ def translate_to_pirate_talk(phrase):
 
     return ""
 
+#--------------------------------------------------------------------------------------------------------------
 
 def kids_game(names):
     """Play a kids' word chain game.

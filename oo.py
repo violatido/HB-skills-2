@@ -84,7 +84,6 @@ class Book(object):
 #------------------------------------------------------------------------------------------------------------
 """5. Rectangle"""
 
-
 class Rectangle:
     """A rectangle."""
 
@@ -98,3 +97,22 @@ class Rectangle:
         """Return the area of the rectangle."""
 
         return self.length * self.width
+
+# Create a class called Square that inherits from Rectangle
+class Square(Rectangle):
+    # Create an __init__ for the Square class:
+    def __init__(self, side):
+        # Be sure to use super in order to call Rectangle.__init__ in your implementation
+        super().__init__(side, side) # => placing "side" as the argument for "width" and length"
+    
+    # Create a method called calculate_area for the Square class. 
+    # Square.calculate_area should check to see if the square’s length and width have the same values
+
+    def calculate_area(self):
+        # If length and width are equivalent, use super to call Rectangle.calculate_area and return its result
+        if self.width == self.length:
+            super().calculate_area()
+        # Otherwise, Square.calculate_area should print Invalid square and return None
+        else:
+            print("Invalid square")
+            return None

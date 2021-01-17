@@ -49,6 +49,24 @@ road_1.speed_limit = 60
 #------------------------------------------------------------------------------------------------------------
 """3. Update Password"""
 
+class User:
+    """A user object."""
+
+    def __init__(self, username, password):
+        """Create a user with the given username and password."""
+
+        self.username = username
+        self.password = password
+    
+    def update_password(self, current_password, new_password):
+        if current_password == self.password:
+            self.current_password = new_password
+        else:
+            print("Invalid password")
+
+ilana = User("violatido", "catkitty01")
+ilana.update_password("catkitty01", "madhat65")
+print(ilana.current_password)
 
 #------------------------------------------------------------------------------------------------------------
 """4. Build a Library"""

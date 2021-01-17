@@ -72,7 +72,28 @@ def print_melon_at_price(price):
         >>> print_melon_at_price(5.50)
         None found
     """
+    # create a dictionary of melons
+    melon_dict = {"honeydew": 1.50, "watermelon": 3.75, "musk": 2.25, "cantaloupe": 2.25}
+    count = 0
+    # iterate through the dictionary
+    for key, value in sorted(melon_dict.items()):
+        # check to see if the current value matches the price
+        if value == price:
+            # if it matches, print ou the melon's name
+            print(key)
+        else:
+            count += 1
+    # if the count does not equal the length of the dictionary's keys, then a match was found
+        # if count does equal the lenght of the dictionary, then no melons match the price
+    if count >= len(melon_dict):
+        print("None found")    
     
+
+print_melon_at_price(5)
+# note for teachers:
+    # I wasn't able to figure out a way to prevent "None found" from being printed every time an iteration
+        # did not find a matching price. 
+        # I know the code above works, but I'd like to know a more elegant solution
 #--------------------------------------------------------------------------------------------------------------
 
 

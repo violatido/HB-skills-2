@@ -214,4 +214,36 @@ def kids_game(names):
     good solutions here will definitely require a dictionary.
     """
 
-    return []
+       # create an empty dictionary
+    # with for loop, populate dictionary where the key is the name, 
+        # and the value is the last character of the previous name
+    # create list to return, starting automatically with the first name in the list
+    # iterate through keys
+        # create a variable that equals the last character of the first name
+        # add a key if the name starts with the last character
+        # don't add a name if it already has been added
+        # update the last character to equal the current key's last character
+    
+    list_returned = [names[0]]
+    poss_dict = {}
+    last_char = names[0][-1]
+
+    for index in range(len(names)):
+        poss_dict[names[index]] = names[index - 1][-1]
+    
+
+    # for key in poss_dict.keys():
+    #      if key not in list_returned and key[0] != last_char:
+    #         list_returned.append(key)
+    #         last_char = key[-1]
+        
+    for key in poss_dict.keys():
+        if key[0] == last_char and key not in list_returned:
+            list_returned.append(key)
+            last_char = key[-1]
+
+    return list_returned  # ['bagon', 'nosepass', 'starly', 'yamask', 'kalob', 'baltoy']
+
+
+print(kids_game(["bagon", "baltoy", "yamask", "starly", "nosepass", "kalob", "nicky", "nicky"]))
+# note: I TRIED REALLY HARD!!! I just can't figure it out

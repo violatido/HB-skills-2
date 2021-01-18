@@ -69,8 +69,8 @@ ilana.update_password("catkitty01", "madhat65")
 print(ilana.current_password)
 
 #------------------------------------------------------------------------------------------------------------
-"""4. Build a Library"""
 
+"""4. Build a Library"""
 
 class Book(object):
     """A Book object."""
@@ -80,6 +80,28 @@ class Book(object):
 
         self.title = title
         self.author = author
+
+# create a subclass, Library, from superclass Book
+class Library(Book):
+    # create an instance attribute called books which starts off as an empty list
+    books = []
+
+
+    # create method create_and_add_book, which takes in the title and author of a book (as strings). 
+    def create_and_add_book(self, title, author):
+        # It should instantiate a Book object by using the Book class's __init__
+        super().__init__(title, author)
+        # add it to the Library’s books list
+        self.books.append(author, [title])
+
+    # create method find_books_by_author, which takes in an author’s name (as a string) 
+    def find_books_by_author(self, author):
+        # the method returns a list of all books by that author
+        return f"{self.author}: {[self.title]}"
+
+middlesex = Library("Middlesex", "Jeffery Eugenides")
+print(middlesex.find_books_by_author("Jeffery Eugenides"))
+# output: Jeffery Eugenides: ['Middlesex']
 
 #------------------------------------------------------------------------------------------------------------
 """5. Rectangle"""
@@ -116,3 +138,5 @@ class Square(Rectangle):
         else:
             print("Invalid square")
             return None
+
+# note: I think I'm close, but I don't believe I got there 100%
